@@ -41,3 +41,9 @@ def softmax(x):
 
 `迴歸問題`使用恆等函數
 `分類問題`使用 Softmax 函數
+
+#### 安裝 Git Large File Storage
+
+git lfs install
+cd C:\Users\ASUS\Documents\GitHub\deep-learning
+git lfs track "\*.pth"
