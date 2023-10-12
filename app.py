@@ -42,8 +42,6 @@ def upload():
     if request.method == 'POST':
         f = request.files['file']
         basepath = os.path.dirname(__file__)
-        if not os.path.exists('uploads'):
-            os.makedirs('uploads')
         file_path = os.path.join(
             basepath, 'uploads', secure_filename(f.filename))
         f.save(file_path)
@@ -61,9 +59,11 @@ def upload():
             predictions = model(image)
             predicted_classes = predictions.argmax(dim=1)
         result = chr(mapp[predicted_classes[0].item()])
+        if os.path.exists(file_path):
+            os.remove(file_path)
         return result
     return None
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port="80")
+    app.run(debug=True, host='0.0.0.0')

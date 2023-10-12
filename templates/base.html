@@ -20,22 +20,14 @@
 </head>
 
 <body>
-    <div id="container">
-        <img src="static/css/headimg.png">
-        <div id="tabs10">
-            <ul>
-                <li class="g1"><a href="index.html"><span class="indexlist">李國誠</span></a></li>
-                <li class="g1"><a href="man.html"><span class="indexlist">張宇鎮</span></a></li>
-                <li class="g1"><a href="cross.html"><span class="indexlist">蔡昇倫</span></a></li>
-                <li class="g1"><a href="cross.html"><span class="indexlist">鄭齊家</span></a></li>
-            </ul>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">手寫字母數字AI辨識 (請選擇要分析的照片)</a>
         </div>
-        <div id="container2">
-            <div class="container">
-                <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
-            </div>
-            <p>&nbsp;</p>
-        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
+    </div>
 </body>
 
 <footer>
